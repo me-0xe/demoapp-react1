@@ -1,3 +1,7 @@
+## Nothing Special
+
+This is just a demo app to get more familiar with react
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
