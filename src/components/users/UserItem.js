@@ -9,7 +9,7 @@ class UserItem extends Component {
     }
 
     render() {
-        const { img, url, login} = this.state;
+        const { img, url, login} = this.props.user;
         return (
             <div className='card text-center'>
                 <img src={img} className='round-img' style={{width: '10%' }}/>
