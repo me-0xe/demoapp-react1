@@ -1,36 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import UserItem from './UserItem';
+import Spinner from '../layout/Spinner';
 
-class Users extends Component {
+const Users = ({users, loading}) => {
+    if(loading){
+        return <Spinner />
+    } 
 
-    state = {
-        users: [
-            {
-                img: 'https://avatars2.githubusercontent.com/u/29059640?v=4',
-                url: 'https://github.com/me-0xe',
-                login: 'me-0xe'
-            },
-            {
-                img: 'https://avatars2.githubusercontent.com/u/29059640?v=4',
-                url: 'https://github.com/me-0xe',
-                login: 'me-0xe2'
-            },
-            {
-                img: 'https://avatars2.githubusercontent.com/u/29059640?v=4',
-                url: 'https://github.com/me-0xe',
-                login: 'me-0xe3'
-            }
-        ]
-    }
-    render() {
-        return (
-            <div>
-                {this.state.users.map(user => (
-                    <UserItem user= {user} />
-                ))} 
-            </div>
-        )
-    }
+    return (
+        <div>
+            {users.map(user => (
+                <UserItem user= {user} />
+            ))} 
+        </div>
+    )
+    
+
+
 }
 
 export default Users
