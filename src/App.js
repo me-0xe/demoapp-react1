@@ -3,6 +3,7 @@ import './App.css';
 import axios from 'axios';
 import Navbar from './components/layout/Navbar';
 import Users from './components/users/Users';
+import Search from './components/users/Search';
 
 class App extends React.Component {
   state = {
@@ -28,6 +29,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Navbar title="Github Finder"/>
+        <Search />
         <Users loading={this.loading} users={this.state.users} />
       </div>
     );
